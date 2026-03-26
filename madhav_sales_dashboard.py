@@ -10,6 +10,7 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 
 import io
 import base64
@@ -66,7 +67,7 @@ def kpi_figure(value, title, prefix=""):
 
 app.layout = html.Div(children=[
     html.H1("Madhav E-Commerce Sales Dashboard",
-            style={"textAlign":"center", "color":"#D3A52881"}),
+            style={"textAlign":"center", "color":"#1D37CAD6"}),
     html.Br(),
     html.Div([
         "Category",
@@ -196,14 +197,89 @@ def get_graph(quater, category):
     encoded = base64.b64encode(buf.read()).decode('utf-8')
     fig5 = f"data:image/png;base64,{encoded}"
     
+    # Profit by Sub-category
+    df_sub_category_profit = filtered_df.groupby(['Sub-Category'])['Profit'].sum().sort_values(ascending=False).head().reset_index()
+    
+    fig6 = px.bar(data_frame=df_sub_category_profit[::-1],
+                 x = "Profit",
+                 y = "Sub-Category",
+                 template = "plotly_white")
+    
+    fig6.update_layout(title="Profit by Sub-Category",
+                       title_x = 0.5,
+                       xaxis_title = "",
+                       yaxis_title = "")
+    
+    fig6.update_traces(marker = {'line':{'width':1, 'color':'black'}},
+                       text = [f"₹{x:,}"  for x in df_sub_category_profit['Profit'][::-1]],
+                       textposition = 'inside')
+    
+    fig6.update_xaxes(showticklabels = False)
+    
+    # Top Revenue States
+    df_category_quantity = filtered_df.groupby('Category')['Quantity'].sum().reset_index()
+    
+    fig7 = px.pie(data_frame=df_category_quantity,
+                  values = 'Quantity',
+                  names = 'Category',
+                  template = 'plotly_white')
+    
+    fig7.update_layout(title = "Quantity Sold by Category",
+                       title_x = 0.5,
+                       showlegend = True)
+    
+    # Quantity Sold by Category
+    df_top_revenue_states = filtered_df.groupby('State')['Amount'].sum().sort_values(ascending=False).head().reset_index()
+    df_top_revenue_states['Percent'] = df_top_revenue_states['Amount'] / df["Amount"].sum() * 100
+    
+    fig8 = px.bar(data_frame=df_top_revenue_states.iloc[::-1],
+                  x = 'Percent',
+                  y = 'State',
+                  template = 'plotly_white')
+    
+    fig8.update_layout(title = "Top Revenue State",
+                       title_x = 0.5,
+                       xaxis_title = "",
+                       yaxis_title = "")
+    
+    fig8.update_traces(marker = {'line':{'width':1, 'color':'black'}},
+                       text = [f"{x:.1f}%" for x in df_top_revenue_states['Percent'][::-1]],
+                       textposition = 'inside')
+    
+    fig8.update_xaxes(showticklabels = False)
+    
     # Payment Mode Distribution
-    diltered_df_payment_mode = filtered_df["PaymentMode"].value_counts().reset_index()
+    df_payment_mode = df["PaymentMode"].value_counts().reset_index()
     
-    fig6 = px.pie(data_frame = diltered_df_payment_mode,
+    fig9 = px.pie(data_frame=df_payment_mode,
                   values = 'count',
-                  names = 'PaymentMode')
+                  names = 'PaymentMode',
+                  template = 'plotly_white')
     
-    return [fig1, fig2, fig3, fig4, fig5, fig6, fig6, fig6, fig6, fig6]
+    fig9.update_layout(title = "Payment Mode Distribution",
+                       title_x = 0.5,
+                       showlegend = True)
+    
+    # Top 5 Customers
+    df_top_customers = filtered_df.groupby("CustomerName")['Amount'].sum().sort_values(ascending=False).head().reset_index()
+    
+    fig10 = px.bar(data_frame = df_top_customers,
+                   x = 'CustomerName',
+                   y = 'Amount',
+                   template = "plotly_white")
+    
+    fig10.update_layout(title = "Top 5 Customers",
+                        title_x = 0.5,
+                        xaxis_title = "",
+                        yaxis_title = "")
+    
+    fig10.update_traces(marker = {'line': {'width':1, 'color':'black'}},
+                        text = [f"₹{x/1000:.1f}K" for x in df_top_customers['Amount']],
+                        textposition = 'outside')
+    
+    fig10.update_yaxes(showticklabels = False)
+    
+    return [fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10]
 
 if __name__ == '__main__':
     app.run(debug=True)
