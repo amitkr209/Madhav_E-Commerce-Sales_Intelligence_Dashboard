@@ -38,7 +38,7 @@ This project demonstrates a complete data analytics workflow — from data acqui
 
 ### 🔗 Live Demo
 
-- **Interactive Python Dashboard**: [View Demo](/images/GIF%20Interactive%20Dashboard.gif)
+- ****Interactive** Python Dashboard**: [View Demo](/images/GIF%20Interactive%20Dashboard.gif)
 - **Power BI Dashboard**: [View Report](/Madhav%20E-Commerce%20Sales%20Dashboard.pbix)
 
 ---
