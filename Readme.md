@@ -125,7 +125,7 @@ Madhav-Ecommerce-Sales-Dashboard/
 ---
 
 ## 📊 Dashboards
- 
+
 ### 1️⃣ Power BI Dashboard
 
 Professional business intelligence dashboard with drill-down capabilities and cross-filtering.
@@ -410,7 +410,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ![Power BI](https://img.shields.io/badge/Power%20BI-Latest-yellow.svg)
 
 ![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle&logoColor=white)
-![GitHub stars](https://img.shields.io/github/stars/amitkr209/your-repo-name?style=social)
+![GitHub stars](https://img.shields.io/github/stars/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard?style=social)
 
 ![License](https://img.shields.io/badge/License-MIT-orange.svg)
 
