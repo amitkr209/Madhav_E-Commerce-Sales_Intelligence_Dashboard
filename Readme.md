@@ -38,7 +38,7 @@ This project demonstrates a complete data analytics workflow — from data acqui
 
 ### 🔗 Live Demo
 
-- **Interactive Python Dashboard**: [View Demo](http://127.0.0.1:8050)
+- **Interactive Python Dashboard**: [View Demo](/images/GIF%20Interactive%20Dashboard.gif)
 - **Power BI Dashboard**: [View Report](/Madhav%20E-Commerce%20Sales%20Dashboard.pbix)
 
 ---
@@ -47,7 +47,7 @@ This project demonstrates a complete data analytics workflow — from data acqui
 
 This project follows a complete data analysis pipeline:
 
-<img alt="Workflow Image" src="/images/Workflow Image.png" align="left ">
+<img alt="Workflow Image" src="/images/Workflow Image.png" height="400" align="left ">
 
 **Step-by-Step Process:**
 
@@ -147,7 +147,7 @@ Professional business intelligence dashboard with drill-down capabilities and cr
 
 Web-based interactive dashboard with dynamic filtering and responsive design.
 
-![Python Dashboard](/images/Python%20Dashboard%20Image.png)
+<img alt="Python Dashboard" src="/images/Python Dashboard Image.png" height="400" align="center">
 
 **Key Features:**
 
