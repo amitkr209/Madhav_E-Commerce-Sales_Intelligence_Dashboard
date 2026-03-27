@@ -166,6 +166,26 @@ Web-based interactive dashboard with dynamic filtering and responsive design.
   - Payment mode distribution (pie chart)
   - Top 5 customers by revenue (bar chart)
 
+## 📦 Project Deliverables & Releases
+
+This project is organized into distinct professional releases to provide tailored solutions for both executive decision-makers and technical analysts.
+
+### 📊 [Power BI Executive Dashboard (v1.0.0-pbi)](https://github.com/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard/releases/tag/v1.0.0-pbi)
+
+* **Target Audience**: Business owners and executive stakeholders focused on high-level performance.
+* **Core Metrics**: Immediate visibility into Total Sales (₹438K), Profit (₹37K), and Quantity (5,615 units).
+* **Visual Intelligence**: Geographic revenue distribution across states and temporal profit trend analysis.
+* **Advanced Analytics**: Features custom DAX measures for Average Order Value (AOV) and interactive quarterly slicers.
+* **Deliverable**: A standalone, interactive `.pbix` file ready for professional reporting.
+
+### 🌐 [Interactive Python Web Analytics (v2.0.0-python)](https://github.com/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard/releases/tag/v2.0.0-python)
+
+* **Target Audience**: Data analysts and developers requiring a scalable, code-driven analytics environment.
+* **Technical Stack**: Fully reactive web application built with **Dash**, **Plotly**, and **Pandas**.
+* **Data Automation**: Programmatic acquisition using the `kagglehub` API to sync directly with the Kaggle dataset.
+* **Dynamic Interactivity**: Advanced Dash callbacks enabling real-time filtering by Category and Quarter across all 10 visuals.
+* **Technical Value**: Demonstrates a complete Python-based ETL and visualization pipeline.
+
 ## 📈 Key Business Insights 🔍
 
 1. **Business is profitable with healthy unit economics**
@@ -191,6 +211,7 @@ Web-based interactive dashboard with dynamic filtering and responsive design.
    - COD accounts for **46%** of transactions.
    - UPI is second at **22%**.
    - High COD dependence can increase return, cancellation, and cash-flow risk.
+
 
 ## 🚀 Business Recommendations
 
