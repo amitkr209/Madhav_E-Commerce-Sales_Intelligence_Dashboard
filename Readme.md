@@ -38,8 +38,8 @@ This project demonstrates a complete data analytics workflow — from data acqui
 
 ### 🔗 Live Demo
 
-- **Interactive Python Dashboard**: [View Demo](http://127.0.0.1:8050)
-- **Power BI Dashboard**: [View Report](/Madhav%20E-Commerce%20Sales%20Dashboard.pbix)
+- **Interactive Python Dashboard**: [Run Locally via Python](http://127.0.0.1:8050)
+- **Power BI Dashboard**: [Download Report File](/Madhav%20E-Commerce%20Sales%20Dashboard.pbix)
 
 ---
 
@@ -47,7 +47,7 @@ This project demonstrates a complete data analytics workflow — from data acqui
 
 This project follows a complete data analysis pipeline:
 
-<img alt="Workflow Image" src="/images/Workflow Image.png" align="left ">
+<img alt="Workflow Image" src="/images/Workflow Image.png" height="600" align="left ">
 
 **Step-by-Step Process:**
 
@@ -401,7 +401,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Project Statistics
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-1.5+-green.svg)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7+-orange.svg)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.12+-teal.svg)
@@ -409,8 +409,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ![Dash](https://img.shields.io/badge/Dash-2.7+-purple.svg)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Latest-yellow.svg)
 
-![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle&logoColor=white)
-![GitHub stars](https://img.shields.io/github/stars/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard?style=social)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/amitkumar209/madhav-e-commerce-sales-dataset)
+[![GitHub stars](https://img.shields.io/github/stars/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard?style=social)](https://github.com/amitkr209/Madhav_E-Commerce-Sales_Intelligence_Dashboard)
 
 ![License](https://img.shields.io/badge/License-MIT-orange.svg)
 
